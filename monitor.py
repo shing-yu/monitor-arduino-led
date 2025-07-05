@@ -166,7 +166,7 @@ class ServiceMonitor:
         print("所有服务状态已更新到LED灯带。")
 
     # noinspection PyUnreachableCode
-    def start_monitoring_loop(self, interval_minutes: int = 3):
+    def start_monitoring_loop(self, interval_minutes: int = 5):
         """启动无限监控循环。"""
         try:
             while True:
