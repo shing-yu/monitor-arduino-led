@@ -211,6 +211,6 @@ if __name__ == '__main__':
 
         # 创建并启动监控器
         monitor_ = ServiceMonitor(led, SERVICES_TO_MONITOR, uptime_kuma_token=UPTIME_KUMA_TOKEN, uptime_kuma_url=UPTIME_KUMA_URL)
-        monitor_.start_monitoring_loop(interval_minutes=3)
+        monitor_.start_monitoring_loop()
     else:
         print("无法启动监控，因为LED控制器初始化失败。请检查串口设置。")
