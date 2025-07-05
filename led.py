@@ -25,7 +25,7 @@ class LedController:
             self.set_brightness(10)  # 设置初始亮度为10
         except serial.SerialException as e:
             print(f"错误：无法打开串口 {port}。")
-            print(f"请检查设备是否连接，或者是否有权限访问。")
+            print(f"请检查设备是否连接/繁忙，或者是否有权限访问。")
             print(f"在Linux上,可尝试使用 'sudo chmod 666 {port}' 来授予权限。")
             print(f"详细错误: {e}")
             self.ser = None
