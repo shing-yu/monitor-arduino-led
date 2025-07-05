@@ -29,7 +29,12 @@ SERVICES_TO_MONITOR = [
         'name': '个人博客',
         'method': 'uptime-kuma',  # 使用 Uptime Kuma API 检查
         'argu': 1  # Uptime Kuma中监控项的ID
-    }
+    },
+    {
+        'name': '空格',
+        'method': 'space',  # 空格占位符
+        'argu': ''  # 空格占位符不需要参数
+    },
 ]
 
 # --- 3. 配置Uptime Kuma API ---
