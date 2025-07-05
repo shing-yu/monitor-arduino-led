@@ -16,5 +16,5 @@ A service monitor that works with Arduino and WS2812B LEDs.
    If needed, you can modify the LED control logic and color definitions in `monitor.py`.
 
 ### 许可证 License
-本项目采用MIT许可证，详见 LICENSE 文件。
+本项目采用MIT许可证，详见 LICENSE 文件。  
 This project is licensed under the MIT License. See the LICENSE file for details.
