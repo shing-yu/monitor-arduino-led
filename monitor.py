@@ -108,6 +108,7 @@ class ServiceMonitor:
             return
 
         print(f"\n{time.strftime('%Y-%m-%d %H:%M:%S')} - 开始新一轮监控...")
+        start_time = time.time()
 
         for i, service in enumerate(self.services):
             name = service['name']
@@ -164,6 +165,10 @@ class ServiceMonitor:
         # 所有LED颜色设置完毕后，一次性更新灯带
         self.led_controller.show()
         print("所有服务状态已更新到LED灯带。")
+
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        print(f"本轮检查耗时: {elapsed_time:.2f}秒")
 
     # noinspection PyUnreachableCode
     def start_monitoring_loop(self, interval_minutes: int = 5):
