@@ -15,6 +15,19 @@ A service monitor that works with Arduino and WS2812B LEDs.
 5. 如果需要，可以修改`monitor.py`中的LED控制逻辑和颜色定义。
    If needed, you can modify the LED control logic and color definitions in `monitor.py`.
 
+### 支持的方式 Supported methods
+- **HTTP**: 通过HTTP请求检查服务状态（支持代理）。  
+  Check service status via HTTP requests (supports proxy).
+- **Ping**: 通过Ping命令检查服务是否可达。  
+  Check service reachability via Ping command.
+- **[Uptime Kuma](https://github.com/louislam/uptime-kuma)**: 通过 [Uptime Kuma](https://github.com/louislam/uptime-kuma) API 检查服务状态。  
+  Check service status via [Uptime Kuma](https://github.com/louislam/uptime-kuma) API.  
+  运行`uptime-gettoken.py`脚本以获取API Token。  
+  Run the `uptime-gettoken.py` script to get the API Token.
+
+需要更多方式？提交 [Issue](https://github.com/shing-yu/monitor-arduino-led/issues) 或 [PR](https://github.com/shing-yu/monitor-arduino-led/pulls)！  
+Want more methods? Submit an [Issue](https://github.com/shing-yu/monitor-arduino-led/issues) or a [PR](https://github.com/shing-yu/monitor-arduino-led/pulls) !
+
 ### 许可证 License
 本项目采用MIT许可证，详见 LICENSE 文件。  
 This project is licensed under the MIT License. See the LICENSE file for details.
