@@ -204,7 +204,7 @@ if __name__ == '__main__':
     # 检查串口是否成功连接
     if led.ser:
         # 启动动画，确认LED工作正常
-        led.set_brightness(18)
+        led.set_brightness(BRIGHTNESS)
         led.rainbow_scroll(duration_s=3)
         led.turn_off()
         time.sleep(1)

@@ -4,6 +4,7 @@
 # 在Linux上可能是 '/dev/ttyUSB0', '/dev/ttyACM0' 等
 SERIAL_PORT = 'COM3'  # 串口设备
 BAUDRATE = 9600  # 波特率，必须与Arduino代码中的设置一致
+BRIGHTNESS = 18  # LED灯的初始亮度，范围0-255
 
 # --- 2. 配置您要监控的服务 ---
 # LED灯珠会按照列表中的顺序依次对应
