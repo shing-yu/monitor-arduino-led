@@ -107,7 +107,7 @@ class ServiceMonitor:
             print("监控暂停，因为LED控制器未连接。")
             return
 
-        print(f"\n{time.strftime('%Y-%m-%d %H:%M:%S')} - 开始新一轮监控...")
+        print(f"\n{time.strftime('%Y-%m-%d %H:%M:%S')} - 开始新一轮检查...")
         start_time = time.time()
 
         for i, service in enumerate(self.services):
