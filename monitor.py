@@ -23,8 +23,8 @@ class ServiceMonitor:
     STATUS_MAINTENANCE = 'MAINTENANCE'
 
     # 颜色定义 (R, G, B)
-    COLOR_CYAN = (0, 171, 85)  # 正常
-    COLOR_YELLOW = (128, 128, 0)  # 首次失败 / Pending
+    COLOR_CYAN = (0, 255, 255)  # 正常
+    COLOR_YELLOW = (255, 200, 0)  # 首次失败 / Pending
     COLOR_RED = (255, 0, 0)  # 多次失败 / Down
     COLOR_BLUE = (0, 0, 255)  # 维护
     COLOR_OFF = (0, 0, 0)  # 关闭
@@ -193,7 +193,7 @@ if __name__ == '__main__':
     # 检查串口是否成功连接
     if led.ser:
         # 启动动画，确认LED工作正常
-        led.set_brightness(15)
+        led.set_brightness(18)
         led.rainbow_scroll(duration_s=3)
         led.turn_off()
         time.sleep(1)
