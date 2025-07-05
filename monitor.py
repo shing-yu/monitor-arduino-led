@@ -21,6 +21,7 @@ class ServiceMonitor:
     STATUS_FAIL = 'FAIL'
     STATUS_PENDING = 'PENDING'
     STATUS_MAINTENANCE = 'MAINTENANCE'
+    SPACE = 'SPACE'  # 空格占位符
 
     # 颜色定义 (R, G, B)
     COLOR_CYAN = (0, 255, 255)  # 正常
@@ -126,13 +127,16 @@ class ServiceMonitor:
             elif method == 'uptime-kuma':
                 # 'name' 用于匹配监控项，'argu' 包含API连接信息
                 status = self._check_uptime_kuma(argu)
+            elif method == 'space':
+                # 空格占位符，什么都不做
+                status = self.SPACE
 
             print(f" 结果: {status}")
 
             # 根据状态和历史失败次数决定颜色
             # noinspection PyUnusedLocal
             color = self.COLOR_OFF
-            if method == 'uptime_kuma':
+            if method == 'uptime-kuma':
                 if status == self.STATUS_OK:
                     color = self.COLOR_CYAN
                 elif status == self.STATUS_PENDING:
@@ -145,6 +149,8 @@ class ServiceMonitor:
                 if status == self.STATUS_OK:
                     self.failure_counts[name] = 0
                     color = self.COLOR_CYAN
+                elif status == self.SPACE:
+                    color = self.COLOR_OFF  # 空格占位符，不显示颜色
                 else:  # FAIL
                     self.failure_counts[name] += 1
                     if self.failure_counts[name] == 1:
