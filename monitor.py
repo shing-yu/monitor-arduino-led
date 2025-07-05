@@ -44,7 +44,7 @@ class ServiceMonitor:
         try:
             # 根据操作系统选择不同参数
             param = '-n' if sys.platform == 'win32' else '-c'
-            command = ['ping', param, '1', '-w', '2', host]
+            command = ['ping', param, '2', '-w', '2', host]
             # 隐藏命令行窗口和输出
             process = subprocess.run(command, capture_output=True, check=False)
             return self.STATUS_OK if process.returncode == 0 else self.STATUS_FAIL
